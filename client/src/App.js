@@ -28,6 +28,7 @@ const [opinions, setOpinions] = useState([]);
 
   return (
     <div className="nav">
+     
       <Link to="/">HOME</Link>
       <Link to="/Food">Food</Link>
       <Link to="/Music">Music</Link>
@@ -36,12 +37,19 @@ const [opinions, setOpinions] = useState([]);
       <Link to="/Society">Society</Link>
       <Link to="/New">New</Link>
     
-      <Route exact path="/" />
+      <Route exact path="/"/>
 
       <Route exact path="/Food">
-        <Food />
+        {opinions.map((opinion) => (
+          <Food 
+          key = {opinion.id}
+          opinions = {opinion}
+          
+          />
+        ))}
+        
       </Route>
-      
+
       <Route exact path="/Music">
         <Music />
       </Route>
