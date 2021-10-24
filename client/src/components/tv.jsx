@@ -1,7 +1,7 @@
 const TV = () => {
     return (
         <div>
-            <h1>TEST</h1>
+            <h1>TV</h1>
         </div>
     )
 }

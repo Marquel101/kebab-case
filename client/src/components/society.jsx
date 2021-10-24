@@ -1,7 +1,7 @@
 const Society = () => {
     return (
         <div>
-            <h1>TEST</h1>
+            <h1>SOCIETY</h1>
         </div>
     )
 }

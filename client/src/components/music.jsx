@@ -1,7 +1,7 @@
 const Music = () => {
     return (
         <div>
-            <h1>TEST</h1>
+            <h1>MUSIC</h1>
         </div>
     )
 }

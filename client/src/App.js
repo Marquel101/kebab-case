@@ -9,14 +9,13 @@ import { useEffect, useState } from 'react'
 import { Route, Link } from "react-router-dom"
 import axios from "axios"
 import './App.css'
-import Navbar from './navbar/navbar.js'
+
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
 
 
 function App() {
-  const [opinions, setOpinions] = useState([]);
-
+const [opinions, setOpinions] = useState([]);
   useEffect(() => {
     console.log('Getting Opinions');
     const getOpinions= async () => {
@@ -28,9 +27,42 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-    </>
+    <div className="nav">
+      <Link to="/">HOME</Link>
+      <Link to="/Food">Food</Link>
+      <Link to="/Music">Music</Link>
+      <Link to="/Travel">Travel</Link>
+      <Link to="/TV">TV</Link>
+      <Link to="/Society">Society</Link>
+      <Link to="/New">New</Link>
+    
+      <Route exact path="/" />
+
+      <Route exact path="/Food">
+        <Food />
+      </Route>
+      
+      <Route exact path="/Music">
+        <Music />
+      </Route>
+      
+      <Route exact path="/Travel">
+        <Travel />
+      </Route>
+      
+      <Route exact path="/TV">
+        <TV />
+      </Route>
+      
+      <Route exact path="/Society">
+        <Society />
+      </Route>
+      
+      <Route exact path="/New">
+        <New />
+      </Route>
+  </div>
+    
   );
 }
 
