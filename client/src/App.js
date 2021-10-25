@@ -4,7 +4,6 @@ import Music from "./components/music.jsx"
 import Society from "./components/society.jsx"
 import New from "./components/new.jsx"
 import Travel from "./components/travel.jsx"
-import Complaint from "./components/complaint.jsx"
 import { useEffect, useState } from 'react'
 import { Route, Link } from "react-router-dom"
 import axios from "axios"
@@ -15,6 +14,7 @@ const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key
 
 
 function App() {
+const [toggleFetch, setToggleFetch] = useState(false)
 const [opinions, setOpinions] = useState([]);
   useEffect(() => {
     console.log('Getting Opinions');
@@ -38,6 +38,7 @@ const [opinions, setOpinions] = useState([]);
       <Link to="/New">New</Link>
       </div>
       <div className="data">
+    
       {opinions.map((opinions) => (
         <Route path="/Food">
         <Food
@@ -83,9 +84,13 @@ const [opinions, setOpinions] = useState([]);
       ))}
 
       <Route path="/New">
-      <New />
+      <New 
+      api={api}
+      setToggleFetch={setToggleFetch}
+      toggleFetch={toggleFetch}/>
       </Route>
-      </div>    
+      </div>  
+   
   </div>
     
   );
