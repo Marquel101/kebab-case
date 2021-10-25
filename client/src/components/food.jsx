@@ -2,7 +2,7 @@ const Food = ({ boom }) => {
     return (
         
        <div>
-           <h5>{boom.fields.opinion}.</h5>
+           ({boom.fields.category === "food" ? <h5> {boom.fields.opinion}</h5> : null})
        </div>
    )
  }
