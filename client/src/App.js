@@ -27,7 +27,7 @@ const [opinion, setOpinion] = useState('')
     }
     getOpinions();
   }, []);
- 
+
   
   return (
     <div>
