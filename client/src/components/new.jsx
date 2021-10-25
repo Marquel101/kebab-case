@@ -1,45 +1,39 @@
 import axios from "axios";
 import { useState } from "react";
 
-export const New = (params) => {
-  const [category, setCategory] = useState('')
-  const [opinion, setOpinion] = useState('')
+const New = ({category, setCategory, opinion, setOpinion, api}) => {
+    const handleSubmit = async (ev) => {
+        ev.preventDefault() 
+    
+        const newOpinions = {
+          records: [
+            {
+                fields: {
+                    category,
+                    opinion
+                }
+            }
+        ]
+        }
+    
+        await axios.post(api, newOpinions)
+    }
 
-  const handleSubmitPost = async (ev) => {
-    ev.preventDefault();
-    const newOpinion = {
-      records: [
-        {
-          fields: {
-            category,
-            opinion,
-          },
-        },
-      ],
-    };
+    return (
+        <div>
+            hi
+            <form onSubmit={handleSubmit}>
+            <label htmlFor="category">Category:</label>
+            <input type="text" id="category" onChange={(ev) => setCategory(ev.target.value)}/>
 
-    await axios.post(params.api, newOpinion);
-
-    params.setToggleFetch(!params.toggleFetch);
-  };
-
-  return (
-    <div>
-      <form onSubmit={handleSubmitPost}>
-        <label htmlFor="category">category: </label>
-        <input type="text"
-          id="category"
-          onChange={(ev) => setCategory(ev.target.value)} />
-
-        <label htmlFor="opinion">opinion:</label>
-        <input type="text"
-          id="opinion"
-          onChange={(ev) => setOpinion(ev.target.value)} />
-
-        <input type='submit' />
-      </form>
-    </div>
-  )
+            <label htmlFor="opinion">Opinion:</label>
+            <input type="text" id="opinion" onChange={(ev) => setOpinion(ev.target.value)}/>
+            <input type="submit"/>
+            </form>
+        </div>
+    )
 }
+
+
 
 export default New

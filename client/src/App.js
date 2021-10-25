@@ -16,6 +16,8 @@ const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key
 function App() {
 const [toggleFetch, setToggleFetch] = useState(false)
 const [opinions, setOpinions] = useState([]);
+const [category, setCategory] = useState('')
+const [opinion, setOpinion] = useState('')
   useEffect(() => {
     console.log('Getting Opinions');
     const getOpinions= async () => {
@@ -25,16 +27,13 @@ const [opinions, setOpinions] = useState([]);
     }
     getOpinions();
   }, []);
-
+ 
+  
   return (
     <div>
       <div className="links">
       <Link to="/">HOME</Link>
       <Link to="/Food">Food</Link>
-      <Link to="/Music">Music</Link>
-      <Link to="/Travel">Travel</Link>
-      <Link to="/TV">TV</Link>
-      <Link to="/Society">Society</Link>
       <Link to="/New">New</Link>
       </div>
       <div className="data">
@@ -46,53 +45,20 @@ const [opinions, setOpinions] = useState([]);
         />
        </Route>
       ))}
-      
-      {opinions.map((opinions) => (
-        <Route path="/Music">
-        <Music
-          key={opinions.id}
-          boom={opinions}
-        />
-       </Route>
-      ))}
-      
-      {opinions.map((opinions) => (
-        <Route path="/Travel">
-        <Travel
-          key={opinions.id}
-          boom={opinions}
-        />
-       </Route>
-      ))}
-      
-      {opinions.map((opinions) => (
-        <Route path="/TV">
-        <TV
-          key={opinions.id}
-          boom={opinions}
-        />
-       </Route>
-      ))}
-      
-      {opinions.map((opinions) => (
-        <Route path="/Society">
-        <Society
-          key={opinions.id}
-          boom={opinions}
-        />
-       </Route>
-      ))}
 
-      <Route path="/New">
-      <New 
-      api={api}
-      setToggleFetch={setToggleFetch}
-      toggleFetch={toggleFetch}/>
+      <Route path='/New'>
+        <New 
+        category = {category}
+        opinion = {opinion}
+        setCategory = {setCategory}
+        setOpinion = {setOpinion}
+        api = {api}
+        />
       </Route>
       </div>  
-   
-  </div>
     
+  </div>
+  
   );
 }
 
