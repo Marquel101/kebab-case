@@ -1,7 +1,7 @@
-const Food = (opinion) => {
+const Food = ({ test }) => {
    return (
-      <div key={opinion._id}>
-          <li>{opinion.opinion}</li>
+      <div>
+          <h5>{test.fields.opinion}</h5>
       </div>
   )
 }

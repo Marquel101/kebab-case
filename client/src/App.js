@@ -27,8 +27,18 @@ const [opinions, setOpinions] = useState([]);
   }, []);
 
   return (
-    <div className="nav">
-     
+    <div>
+      {opinions.map((opinions) => (
+        <Route path="/Food">
+        <Food
+        key={opinions.id}
+        test={opinions}
+        />
+        </Route>
+      ))}
+      
+      
+
       <Link to="/">HOME</Link>
       <Link to="/Food">Food</Link>
       <Link to="/Music">Music</Link>
@@ -36,39 +46,6 @@ const [opinions, setOpinions] = useState([]);
       <Link to="/TV">TV</Link>
       <Link to="/Society">Society</Link>
       <Link to="/New">New</Link>
-    
-      <Route exact path="/"/>
-
-      <Route exact path="/Food">
-        {opinions.map((opinion) => (
-          <Food 
-          key = {opinion.id}
-          opinions = {opinion}
-          
-          />
-        ))}
-        
-      </Route>
-
-      <Route exact path="/Music">
-        <Music />
-      </Route>
-      
-      <Route exact path="/Travel">
-        <Travel />
-      </Route>
-      
-      <Route exact path="/TV">
-        <TV />
-      </Route>
-      
-      <Route exact path="/Society">
-        <Society />
-      </Route>
-      
-      <Route exact path="/New">
-        <New />
-      </Route>
   </div>
     
   );
