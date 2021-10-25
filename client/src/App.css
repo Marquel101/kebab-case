@@ -1,5 +1,15 @@
 * {
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0;
+    background-color: grey;
+}
+.links {
+    color: red;
+    display: flex;
+    justify-content: space-around;
+    border: 2px dashed cyan;
+    background: black;
+}
+
+.data {
+    color: blue;
+    padding: 10px;
 }

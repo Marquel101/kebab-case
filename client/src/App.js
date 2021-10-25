@@ -28,6 +28,7 @@ const [opinions, setOpinions] = useState([]);
 
   return (
     <div>
+      <div className="links">
       <Link to="/">HOME</Link>
       <Link to="/Food">Food</Link>
       <Link to="/Music">Music</Link>
@@ -35,7 +36,8 @@ const [opinions, setOpinions] = useState([]);
       <Link to="/TV">TV</Link>
       <Link to="/Society">Society</Link>
       <Link to="/New">New</Link>
-
+      </div>
+      <div className="data">
       {opinions.map((opinions) => (
         <Route path="/Food">
         <Food
@@ -83,7 +85,8 @@ const [opinions, setOpinions] = useState([]);
 
       <Route path="/New">
       <New />
-      </Route>      
+      </Route>
+      </div>    
   </div>
     
   );
