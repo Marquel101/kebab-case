@@ -41,7 +41,6 @@ const [opinions, setOpinions] = useState([]);
       {opinions.map((opinions) => (
         <Route path="/Food">
         <Food
-          key={opinions.id}
           boom={opinions}
         />
        </Route>
