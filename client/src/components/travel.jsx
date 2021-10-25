@@ -1,8 +1,7 @@
 const Travel = ({ boom }) => {
-    return (
-        
+    return ( 
        <div>
-           <h5>{boom.fields.opinion}.</h5>
+           {boom.fields.category == "travel" ? <h3> {boom.fields.opinion}</h3> : null }
        </div>
    )
  }

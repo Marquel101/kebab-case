@@ -1,10 +1,9 @@
 const TV = ({ boom }) => {
-   return (
-       
-      <div>
-          <h5>{boom.fields.opinion}.</h5>
-      </div>
-  )
-}
-
+    return ( 
+       <div>
+           {boom.fields.category == "tv" ? <h3> {boom.fields.opinion}</h3> : null }
+       </div>
+   )
+ }
+ 
 export default TV
