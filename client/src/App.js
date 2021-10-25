@@ -33,9 +33,17 @@ function App() {
       <div className="links">
       <Link to="/">HOME</Link>
       <Link to="/Food">Food</Link>
+      {/* <Link to="/Music">Music</Link>
+      <Link to="/Society">Society</Link>
+      <Link to="/Travel">Travel</Link>*/}
+      <Link to="/TV">TV</Link> 
       <Link to="/New">New</Link>
       </div>
       <div className="data">
+    
+    
+    
+    
     
       {opinions.map((opinions) => (
         <Route path="/Food">
@@ -44,6 +52,41 @@ function App() {
         />
        </Route>
       ))}
+    
+      {/* {opinions.map((opinions) => (
+        <Route path="/Music">
+        <Music
+          boom={opinions}
+        />
+       </Route>
+      ))}
+    
+      {opinions.map((opinions) => (
+        <Route path="/Society">
+        <Society
+          boom={opinions}
+        />
+       </Route>
+      ))}
+    
+      {opinions.map((opinions) => (
+        <Route path="/Travel">
+        <Travel
+          boom={opinions}
+        />
+       </Route>
+      ))} */}
+    
+      {opinions.map((opinions) => (
+        <Route path="/TV">
+        <TV
+          boom = {opinions}
+          api = {api}
+          toggleFetch = {toggleFetch}
+          setToggleFetch = {setToggleFetch}
+        />
+       </Route>
+      ))} 
 
       <Route path='/New'>
         <New 

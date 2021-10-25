@@ -21,13 +21,12 @@ const New = (params) => {
         await axios.post(params.api, newOpinions)
         
         params.setToggleFetch(!params.toggleFetch)
-        
+
         window.location.reload(false)
     }
 
     return (
         <div>
-            hi
             <form onSubmit={handleSubmit}>
             <label htmlFor="category">Category:</label>
             <input type="text" id="category" onChange={(ev) => setCategory(ev.target.value)}/>
