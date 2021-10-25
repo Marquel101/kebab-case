@@ -26,7 +26,7 @@ function App() {
     }
     getOpinions();
   }, []);
-
+  
   
   return (
     <div>
