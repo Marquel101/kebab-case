@@ -47,7 +47,7 @@ const [opinions, setOpinions] = useState([]);
        </Route>
       ))}
       
-      {opinions.map((opinions) => (
+      {/* {opinions.map((opinions) => (
         <Route path="/Music">
         <Music
           key={opinions.id}
@@ -85,7 +85,7 @@ const [opinions, setOpinions] = useState([]);
 
       <Route path="/New">
       <New />
-      </Route>
+      </Route> */}
       </div>    
   </div>
     
