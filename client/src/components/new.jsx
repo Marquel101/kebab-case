@@ -1,8 +1,10 @@
-const New = () => {
-   return (
-      <div>
-          <h1>NEW</h1>
-      </div>
-  )
-}
+const New = ({ boom }) => {
+    return (
+        
+       <div>
+           <h5>L</h5>
+       </div>
+   )
+ }
+ 
 export default New

@@ -1,8 +1,10 @@
-const Society = () => {
+const Society = ({ boom }) => {
     return (
-        <div>
-            <h1>SOCIETY</h1>
-        </div>
-    )
-}
+        
+       <div>
+           <h5>{boom.fields.opinion}.</h5>
+       </div>
+   )
+ }
+ 
 export default Society

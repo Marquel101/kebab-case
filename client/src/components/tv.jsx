@@ -1,8 +1,10 @@
-const TV = () => {
+const TV = ({ boom }) => {
     return (
-        <div>
-            <h1>TV</h1>
-        </div>
-    )
-}
+        
+       <div>
+           <h5>{boom.fields.opinion}.</h5>
+       </div>
+   )
+ }
+ 
 export default TV
