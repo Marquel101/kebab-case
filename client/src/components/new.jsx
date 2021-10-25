@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 
-const New = ({category, setCategory, opinion, setOpinion, api}) => {
-    const handleSubmit = async (ev) => {
-        ev.preventDefault() 
+const New = (params) => {
+    
+    const [category, setCategory] = useState('')
+    const [opinion, setOpinion] = useState('')
+    const handleSubmit = async () => {
     
         const newOpinions = {
           records: [
@@ -16,7 +18,11 @@ const New = ({category, setCategory, opinion, setOpinion, api}) => {
         ]
         }
     
-        await axios.post(api, newOpinions)
+        await axios.post(params.api, newOpinions)
+        
+        params.setToggleFetch(!params.toggleFetch)
+        
+        window.location.reload(false)
     }
 
     return (
@@ -33,7 +39,7 @@ const New = ({category, setCategory, opinion, setOpinion, api}) => {
         </div>
     )
 }
-
+ 
 
 
 export default New

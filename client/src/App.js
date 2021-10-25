@@ -14,10 +14,9 @@ const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key
 
 
 function App() {
-const [toggleFetch, setToggleFetch] = useState(false)
-const [opinions, setOpinions] = useState([]);
-const [category, setCategory] = useState('')
-const [opinion, setOpinion] = useState('')
+  const [toggleFetch, setToggleFetch] = useState(false)
+  const [opinions, setOpinions] = useState([]);
+
   useEffect(() => {
     console.log('Getting Opinions');
     const getOpinions= async () => {
@@ -48,11 +47,9 @@ const [opinion, setOpinion] = useState('')
 
       <Route path='/New'>
         <New 
-        category = {category}
-        opinion = {opinion}
-        setCategory = {setCategory}
-        setOpinion = {setOpinion}
         api = {api}
+        toggleFetch = {toggleFetch}
+        setToggleFetch = {setToggleFetch}
         />
       </Route>
       </div>  
