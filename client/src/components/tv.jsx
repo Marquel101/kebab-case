@@ -1,16 +1,18 @@
 import React from "react";
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
-import axios from "axios"
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+
 
 const TV = ({boom}) => {
-  const test = {boom}
+  const test = boom
   console.log(test) 
   const categoryData = []
   const opinionData = []
    boom.map((test) => {
+    if (test.fields.category === "tv") {
     categoryData.push(test.fields.category)
-    opinionData.push(test.fields.opinion)
+    opinionData.push(test.fields.opinion) 
+    }
   }) 
   console.log(categoryData)
   console.log(opinionData)
@@ -37,6 +39,7 @@ const TV = ({boom}) => {
     <section className="slider">
       <h1>
             {categoryData.map((slide, index) => {
+              
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key ={index}>
                         {index === current && (<h4>{slide}</h4>)}
