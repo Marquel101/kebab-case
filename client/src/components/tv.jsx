@@ -37,17 +37,6 @@ const TV = ({boom}) => {
 
   return (
     <section className="slider">
-      <h1>
-            {categoryData.map((slide, index) => {
-              
-                return (
-                    <div className={index === current ? 'slide active' : 'slide'} key ={index}>
-                        {index === current && (<h4>{slide}</h4>)}
-                        
-                        </div>
-                )
-            })} 
-            </h1>
             <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
             <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
             
