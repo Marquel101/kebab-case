@@ -1,64 +1,63 @@
-import React, { Component} from "react";
-import Slider from "react-slick";
+import React from "react";
+import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
 import axios from "axios"
 import { useEffect, useState } from 'react'
-const TV = () => {
-return (
-  <div> HELLO </div>
-)
+
+const TV = ({boom}) => {
+  const test = {boom}
+  console.log(test) 
+  const categoryData = []
+  const opinionData = []
+   boom.map((test) => {
+    categoryData.push(test.fields.category)
+    opinionData.push(test.fields.opinion)
+  }) 
+  console.log(categoryData)
+  console.log(opinionData)
+
+  const [current, setCurrent] = useState(0)
+    const length = opinionData.length
+
+    const nextSlide = () => {
+    setCurrent(current === length -1 ? 0 : current + 1)
+    } 
+    
+    console.log(current)
+
+    const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1)
+    } 
+
+
+    if(!Array.isArray(opinionData) || opinionData.length <= 0 ) {
+        return null
+    }
+
+  return (
+    <section className="slider">
+      <h1>
+            {categoryData.map((slide, index) => {
+                return (
+                    <div className={index === current ? 'slide active' : 'slide'} key ={index}>
+                        {index === current && (<h4>{slide}</h4>)}
+                        
+                        </div>
+                )
+            })} 
+            </h1>
+            <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
+            <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+            
+            {opinionData.map((slide, index) => {
+                return (
+                    <div className={index === current ? 'slide active' : 'slide'} key ={index}>
+                        {index === current && (<h4>{slide}</h4>)}
+                        
+                        </div>
+                )
+            })}
+        </section>
+  )
 }
 
-/*const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
-
-export default class TV extends Component {
-  constructor(boom)
-  superxport default class TV extends Component {
-  constructor(boom)
-  super(boom)
-    render() {
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-     
-      return (
-        
-        <div>
-          {boom.category === "tv" ? 
-          <Slider {...settings}> 
-            <div>
-              <h5>{boom.opinion}</h5>
-            </div> 
-          </Slider>
-          : null }
-        </div>
-      );
-    }
-  }er() {
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-     
-      return (
-        
-        <div>
-          {boom.category === "tv" ? 
-          <Slider {...settings}> 
-            <div>
-              <h5>{boom.opinion}</h5>
-            </div> 
-          </Slider>
-          : null }
-        </div>
-      );
-    }
-  }*/
-
-  export default TV
+export default TV

@@ -10,6 +10,7 @@ import axios from "axios"
 import './App.css'
 import ImageSlider from "./components/Slider.js"
 import { SliderData } from './components/SliderData.js'
+import OpinionData from "./components/OpinionData.js"
 
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
@@ -41,10 +42,11 @@ function App() {
       <Link to="/TV">TV</Link> 
       <Link to="/New">New</Link>
       </div>
-      <ImageSlider 
+       {/* <ImageSlider 
       slides = {SliderData}
-      />
-    
+      />  */}
+    <OpinionData 
+    opinions = {opinions}/>
       <div className="data">
 
       {opinions.map((opinions) => (
@@ -79,13 +81,13 @@ function App() {
        </Route>
       ))} 
 
-      {opinions.map((opinions) => (
+      
         <Route path="/TV">
         <TV
           boom = {opinions}
         />
        </Route>
-      ))} 
+      
 
       <Route path='/New'>
         <New
