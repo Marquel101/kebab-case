@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react'
 import { Route, Link } from "react-router-dom"
 import axios from "axios"
 import './App.css'
+import ImageSlider from "./components/Slider.js"
+import { SliderData } from './components/SliderData.js'
 
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
@@ -39,12 +41,12 @@ function App() {
       <Link to="/TV">TV</Link> 
       <Link to="/New">New</Link>
       </div>
+      <ImageSlider 
+      slides = {SliderData}
+      />
+    
       <div className="data">
-    
-    
-    
-    
-    
+
       {opinions.map((opinions) => (
         <Route path="/Food">
         <Food
