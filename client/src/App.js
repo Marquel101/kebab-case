@@ -42,26 +42,31 @@ function App() {
       
       <div className="data">
         <Route path="/Food">
+          <h1>FOOD</h1>
         <Food
           boom = {opinions}
         />
        </Route>
         <Route path="/Music">
+        <h1>MUSIC</h1>
         <Music
           boom = {opinions}
         />
        </Route>
         <Route path="/Society">
+        <h1>SOCIETY</h1>
         <Society
           boom = {opinions}
         />
        </Route>
         <Route path="/Travel">
+        <h1>TRAVEL</h1>
         <Travel
           boom = {opinions}
         />
        </Route>
         <Route path="/TV">
+        <h1>TV</h1>
         <TV
           boom = {opinions}
         />
