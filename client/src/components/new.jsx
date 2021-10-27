@@ -32,7 +32,7 @@ const New = ({toggleFetch, setToggleFetch}) => {
             <div>
                 <form onSubmit={handleSubmit} autoComplete="off">
                 <label htmlFor="category">Category:</label>
-                <input type="radio" id="category" value={category} onChange={(ev) => setCategory(ev.target.value)}/>
+                <input type="text" id="category" value={category} onChange={(ev) => setCategory(ev.target.value)}/>
 
                 <label htmlFor="opinion">Opinion:</label>
                 <input type="text" id="opinion" value={opinion} onChange={(ev) => setOpinion(ev.target.value)}/>
