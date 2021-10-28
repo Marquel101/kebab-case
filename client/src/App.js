@@ -9,7 +9,7 @@ import { Route, Link } from "react-router-dom"
 import axios from "axios"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import { Navbar } from "react-bootstrap"
+import { Nav, Navbar, NavDropdown } from "react-bootstrap"
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
 
@@ -31,28 +31,29 @@ function App() {
   
   return (
     <div>
-      <Navbar bg="myColor" variant="dark">
+      <Navbar bg="nav" variant="dark" expand="sm" collapseOnSelect>
         <Navbar.Brand>
         Logo
         </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="/">HOME</Nav.Link>
+            <NavDropdown title="Topics">
+              <NavDropdown.Item href="/Food">Food</NavDropdown.Item>
+              <NavDropdown.Divider/>
+              <NavDropdown.Item href="/Music">Music</NavDropdown.Item>
+              <NavDropdown.Divider/>
+              <NavDropdown.Item href="/Society">Society</NavDropdown.Item>
+              <NavDropdown.Divider/>
+              <NavDropdown.Item href="/Travel">Travel</NavDropdown.Item>
+              <NavDropdown.Divider/>
+              <NavDropdown.Item href="/TV">TV</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="/New">New</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
-      {/* <Navbar /> */}
-      {/* <ul>
-        <div className="links">
-          <li><Link to="/">HOME</Link></li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Categories</a>
-            <div class="dropdown-content">
-          <Link to="/Food">Food</Link>
-          <Link to="/Music">Music</Link>
-          <Link to="/Society">Society</Link>
-          <Link to="/Travel">Travel</Link>
-          <Link to="/TV">TV</Link> 
-          </div>
-          </li>
-          <li><Link to="/New">New</Link></li>
-        </div>
-      </ul> */}
       <div className="data">
         <Route path="/Food">
           <h1>FOOD</h1>

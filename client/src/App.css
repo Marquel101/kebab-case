@@ -63,9 +63,32 @@
   .dropdown:hover .dropdown-content {
     display: block;
   } */
-
-.bg-myColor {
-    background-color: violet;
+.food a:hover {
+    background-color: rgb(214, 119, 41);
+    opacity: 50%;
+}
+.music a:hover {
+    color: white;
+    background-color: rgb(3, 3, 3);
+    opacity: 50%;
+}
+.society a:hover {
+    background-color: rgba(84, 3, 109, 0.808);
+    opacity: 50%;
+}
+.travel a:hover {
+    background-color: rgb(71, 177, 226);
+    opacity: 50%;
+}
+.tv a:hover {
+    background-color: rgb(58, 57, 57);
+    opacity: 50%;
+}
+.bg-nav {
+    background-color: rgb(182, 160, 135);
+}
+.bg-nav a:hover {
+    background-color: rgb(114, 112, 110);
 }
 * {
     box-sizing: border-box;
