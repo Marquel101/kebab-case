@@ -42,7 +42,7 @@ const TV = ({boom}) => {
             
             {opinionData.map((slide, index) => {
                 return (
-                    <div className={index === current ? 'slide active' : 'slide'} key ={index}>
+                    <div className={index === current ? 'slide-active' : 'slide'} key ={index}>
                         {index === current && (<h4>{slide}</h4>)}
                         
                         </div>

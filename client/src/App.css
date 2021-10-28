@@ -19,27 +19,37 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
 .right-arrow {
     position:absolute;
-    top: 50%;
-    right: 32px;
+    top: 30%;
+    right: 5%;
     font-size: 3rem;
-    color: #000;
+    color: rgb(190, 16, 16);
     z-index: 10;
     cursor: pointer;
     user-select: none;
 }
 .left-arrow {
     position:absolute;
-    top: 50%;
-    left: 32px;
+    top: 30%;
+    left: 5%;
     font-size: 3rem;
-    color: #000;
+    color: rgb(146, 19, 19);
     z-index: 10;
     cursor: pointer;
     user-select: none;
+}
+
+.slide-active {
+    color: red;
+    padding: 10px;
+    border: 5px solid black;
+    position: relative;
+   /* justify-content: center; */
+    display: flex;
+    align-items: baseline;
 }

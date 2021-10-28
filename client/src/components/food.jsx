@@ -8,12 +8,14 @@ const Food = ({boom}) => {
   console.log(test) 
   const categoryData = []
   const opinionData = []
+  
    boom.map((test) => {
     if (test.fields.category === "food") {
     categoryData.push(test.fields.category)
     opinionData.push(test.fields.opinion) 
     }
   }) 
+  
   console.log(categoryData)
   console.log(opinionData)
 
@@ -37,18 +39,18 @@ const Food = ({boom}) => {
 
   return (
     <section className="slider">
-            <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
-            <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-            
-            {opinionData.map((slide, index) => {
-                return (
-                    <div className={index === current ? 'slide active' : 'slide'} key ={index}>
-                        {index === current && (<h4>{slide}</h4>)}
-                        
-                        </div>
-                )
-            })}
-        </section>
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      
+      {opinionData.map((slide, index) => {
+          return (
+              <div className={index === current ? 'slide-active' : 'slide'} key ={index}>
+                  {index === current && (<h4>{slide}</h4>)}
+              </div>
+          )
+      })}
+      
+    </section>
   )
 }
 
