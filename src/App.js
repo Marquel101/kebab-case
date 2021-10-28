@@ -1,3 +1,4 @@
+import Home from "./components/Home.jsx"
 import TV from "./components/tv.jsx"
 import Food from "./components/food.jsx"
 import Music from "./components/music.jsx"
@@ -19,10 +20,8 @@ function App() {
   const [opinions, setOpinions] = useState([]);
 
   useEffect(() => {
-    console.log('Getting Opinions');
     const getOpinions= async () => {
       const resp = await axios.get(api);
-      console.log(resp.data);
       setOpinions(resp.data.records);
     }
     getOpinions();
@@ -33,7 +32,7 @@ function App() {
     <div>
       <Navbar bg="nav" variant="dark" expand="sm" collapseOnSelect>
         <Navbar.Brand>
-        Logo
+        TOUGH TALK
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
@@ -54,6 +53,9 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <div className="body">
+        <Home />
+      </div>
       <div className="data">
         <Route path="/Food">
           <h1>FOOD</h1>

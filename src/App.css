@@ -1,94 +1,11 @@
-/* * {
-    background-color: rgba(161, 114, 78, 0.733);
-}
-.links {
-    color: red;
-    display: flex;
-    justify-content: space-around;
-    border: 2px dashed cyan;
-    background: black;
-}
-
-.data {
-    color: blue;
-    padding: 10px;
-} */
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-   float: left;
-  }
-  
-  li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
-  
-  li.dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  } */
-.food a:hover {
-    background-color: rgb(214, 119, 41);
-    opacity: 50%;
-}
-.music a:hover {
-    color: white;
-    background-color: rgb(3, 3, 3);
-    opacity: 50%;
-}
-.society a:hover {
-    background-color: rgba(84, 3, 109, 0.808);
-    opacity: 50%;
-}
-.travel a:hover {
-    background-color: rgb(71, 177, 226);
-    opacity: 50%;
-}
-.tv a:hover {
-    background-color: rgb(58, 57, 57);
-    opacity: 50%;
+ {
+    background-color: bisque;
 }
 .bg-nav {
     background-color: rgb(182, 160, 135);
 }
 .bg-nav a:hover {
-    background-color: rgb(114, 112, 110);
+    background-color: rgb(223, 184, 145);
 }
 * {
     box-sizing: border-box;
