@@ -1,16 +1,23 @@
- {
-    background-color: bisque;
+h6 {
+    background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+    border: 2px solid black;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
 }
 .bg-nav {
-    background-color: rgb(182, 160, 135);
+    background-color: rgb(230, 42, 42);
 }
 .bg-nav a:hover {
     background-color: rgb(223, 184, 145);
 }
-* {
+.body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: rgb(241, 129, 129);
 
 }
 .slider {

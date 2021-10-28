@@ -52,11 +52,17 @@ function App() {
             <Nav.Link href="/New">New</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        
       </Navbar>
-      <div className="body">
-        <Home />
+      <div>
+        
       </div>
       <div className="data">
+        
+        <Route path="/" exact>
+            <Home />
+        </Route>
+        
         <Route path="/Food">
           <h1>FOOD</h1>
         <Food
@@ -94,8 +100,7 @@ function App() {
         setToggleFetch = {setToggleFetch}
         />
       </Route>
-      </div>  
-    
+      </div> 
   </div>
   
   );
