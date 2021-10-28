@@ -13,6 +13,7 @@ const Travel = ({boom}) => {
     categoryData.push(test.fields.category)
     opinionData.push(test.fields.opinion) 
     }
+    return null
   }) 
   console.log(categoryData)
   console.log(opinionData)

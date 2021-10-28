@@ -5,7 +5,7 @@ import Society from "./components/society.jsx"
 import New from "./components/new.jsx"
 import Travel from "./components/travel.jsx"
 import { useEffect, useState } from 'react'
-import { Route, Link } from "react-router-dom"
+import { Route } from "react-router-dom"
 import axios from "axios"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
