@@ -4,8 +4,6 @@ import { useState } from 'react'
 
 
 const Society = ({boom}) => {
-  const test = boom
-  console.log(test) 
   const categoryData = []
   const opinionData = []
    boom.map((test) => {
@@ -14,9 +12,7 @@ const Society = ({boom}) => {
     opinionData.push(test.fields.opinion) 
     }
     return null
-  }) 
-  console.log(categoryData)
-  console.log(opinionData)
+  })
 
   const [current, setCurrent] = useState(0)
     const length = opinionData.length
@@ -24,8 +20,6 @@ const Society = ({boom}) => {
     const nextSlide = () => {
     setCurrent(current === length -1 ? 0 : current + 1)
     } 
-    
-    console.log(current)
 
     const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)

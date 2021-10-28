@@ -4,8 +4,6 @@ import { useState } from 'react'
 
 
 const Food = ({boom}) => {
-  const test = boom
-  console.log(test) 
   const categoryData = []
   const opinionData = []
   
@@ -15,10 +13,7 @@ const Food = ({boom}) => {
     opinionData.push(test.fields.opinion) 
     }
     return null
-  }) 
-  
-  console.log(categoryData)
-  console.log(opinionData)
+  })
 
   const [current, setCurrent] = useState(0)
     const length = opinionData.length
@@ -26,8 +21,6 @@ const Food = ({boom}) => {
     const nextSlide = () => {
     setCurrent(current === length -1 ? 0 : current + 1)
     } 
-    
-    console.log(current)
 
     const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
@@ -44,13 +37,12 @@ const Food = ({boom}) => {
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
       
       {opinionData.map((slide, index) => {
-          return (
-              <div className={index === current ? 'slide-active' : 'slide'} key ={index}>
-                  {index === current && (<h4>{slide}</h4>)}
-              </div>
+        return (
+          <div className={index === current ? 'slide-active' : 'slide'} key ={index}>
+            {index === current && (<h4>{slide}</h4>)}
+          </div>
           )
-      })}
-      
+      })}  
     </section>
   )
 }
