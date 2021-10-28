@@ -13,7 +13,7 @@
     color: blue;
     padding: 10px;
 } */
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -62,8 +62,11 @@ ul {
   
   .dropdown:hover .dropdown-content {
     display: block;
-  }
+  } */
 
+.bg-myColor {
+    background-color: violet;
+}
 * {
     box-sizing: border-box;
     margin: 0;

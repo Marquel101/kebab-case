@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react'
 import { Route, Link } from "react-router-dom"
 import axios from "axios"
 import './App.css'
-import Navbar from "./component/Navbar/Navbar.js"
+import 'bootstrap/dist/css/bootstrap.css'
+import { Navbar } from "react-bootstrap"
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
 
@@ -30,8 +31,13 @@ function App() {
   
   return (
     <div>
+      <Navbar bg="myColor" variant="dark">
+        <Navbar.Brand>
+        Logo
+        </Navbar.Brand>
+      </Navbar>
       {/* <Navbar /> */}
-      <ul>
+      {/* <ul>
         <div className="links">
           <li><Link to="/">HOME</Link></li>
           <li class="dropdown">
@@ -46,7 +52,7 @@ function App() {
           </li>
           <li><Link to="/New">New</Link></li>
         </div>
-      </ul>
+      </ul> */}
       <div className="data">
         <Route path="/Food">
           <h1>FOOD</h1>
