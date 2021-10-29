@@ -1,5 +1,5 @@
 import React from "react";
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import {FaArrowAltCircleLeft, FaArrowAltCircleRight, } from 'react-icons/fa'
 import { useState } from 'react'
 
 
@@ -35,6 +35,8 @@ const Food = ({boom}) => {
     <section className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide}/>
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {/* <FaHotjar className="left-arrow" onClick={prevSlide}/>
+      <FaHotjar className="right-arrow" onClick={nextSlide} /> */}
       
       {opinionData.map((slide, index) => {
         return (
