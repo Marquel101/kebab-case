@@ -12,6 +12,8 @@ import axios from "axios"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { RiMovieFill } from "react-icons/ri"
+import { IoFastFoodOutline, IoMusicalNotes } from "react-icons/io5"
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
 
@@ -66,13 +68,13 @@ function App() {
         </Route>
         
         <Route path="/Food">
-          <h1>FOOD</h1>
+          <h1>FOOD<IoFastFoodOutline /></h1>
         <Food
           boom = {opinions}
         />
        </Route>
         <Route path="/Music">
-        <h1>MUSIC</h1>
+        <h1>MUSIC <IoMusicalNotes /></h1>
         <Music
           boom = {opinions}
         />
@@ -90,7 +92,7 @@ function App() {
         />
        </Route>
         <Route path="/TV">
-        <h1>TV</h1>
+        <h1>TV<RiMovieFill /></h1>
         <TV
           boom = {opinions}
         />
