@@ -72,13 +72,18 @@ h3 {
     color: rgb(172, 4, 4) ;
     margin: 40px 0 0 0;
 }
+
 .socials {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin: 0 40px;
 }
+h1.food {
+    color: orange;
+}
 @media only screen and (min-width: 575px) {
+    
     .slide-active {
     position:relative;
     width: 320px;
@@ -96,7 +101,7 @@ h3 {
     font-size: 3.4em;
     }
 
-    .slide-active:before,
+    
     .slide-active:after {
     content: "\0020";
     display:block;
@@ -123,9 +128,37 @@ h3 {
         margin: 0;
         padding: 0;
         background-color: rgb(223, 108, 80);
-        background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6HucSyjfqJcbhmw0lEHZ4IEJxNsJwN67RJRyDwTfN6Gmo9sKySEmNdoSck9Tgfu2zNK0&usqp=CAU");
         background-position: center;
         background-repeat: repeat-y;
        }
+       .slide-active {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        border: 5px solid rgb(0, 0, 0);
+        position: relative;
+        justify-content: center;
+        display: flex;
+        align-items: baseline;
+        margin: 0 30px;
+        border-radius: 20px;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: rgba(245, 229, 229, 0.548);
+    }
+    h1 {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        color: rgb(172, 4, 4) ;
+        margin: 40px 0 0 0;
+        background-color: rgba(245, 229, 229, 0.548);
+        margin: 0 30px;
+    }
     
+    .fyi {
+        background-color: rgba(245, 229, 229, 0.548);
+        margin: 0 17% 0 0;
+        text-align: center;
+    }
 }

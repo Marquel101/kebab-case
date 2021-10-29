@@ -1,5 +1,5 @@
 import Home from "./components/Home.jsx"
-import Contact from "./components/Complaint.jsx"
+import Contact from "./components/Contact.jsx"
 import TV from "./components/tv.jsx"
 import Food from "./components/food.jsx"
 import Music from "./components/music.jsx"
@@ -68,36 +68,37 @@ function App() {
         </Route>
         
         <Route path="/Food">
-          <h1>FOOD<IoFastFoodOutline /></h1>
+          <h1 id="food">FOOD<IoFastFoodOutline /></h1>
         <Food
           boom = {opinions}
         />
        </Route>
         <Route path="/Music">
-        <h1>MUSIC <IoMusicalNotes /></h1>
+        <h1 id="music">MUSIC <IoMusicalNotes /></h1>
         <Music
           boom = {opinions}
         />
        </Route>
         <Route path="/Society">
-        <h1>SOCIETY<RiBuilding4Line /></h1>
+        <h1 id="society">SOCIETY<RiBuilding4Line /></h1>
         <Society
           boom = {opinions}
         />
        </Route>
         <Route path="/Travel">
-        <h1>TRAVEL<IoAirplane /></h1>
+        <h1 id="travel">TRAVEL<IoAirplane /></h1>
         <Travel
           boom = {opinions}
         />
        </Route>
         <Route path="/TV">
-        <h1>TV<RiMovieFill /></h1>
+        <h1 id="tv">TV<RiMovieFill /></h1>
         <TV
           boom = {opinions}
         />
        </Route>
       <Route path='/New'>
+        <h1 id="new"> ADD ONE FOR ME </h1>
         <New
         key = {opinions.id} 
         toggleFetch = {toggleFetch}
