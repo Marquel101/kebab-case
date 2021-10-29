@@ -4,6 +4,7 @@
     position: relative;
     opacity: 1.00;
     color: white;
+    
     margin: 100px 200px 0 200px;
     text-align: center;
     padding: 20px ;
@@ -11,7 +12,6 @@
 h1 {
     color:rgb(228, 15, 15);
     text-align:center;
-
 }
 .bg-nav {
     background-color: rgb(230, 42, 42);
@@ -72,7 +72,6 @@ h3 {
     color: rgb(172, 4, 4) ;
     margin: 40px 0 0 0;
 }
-
 .socials {
     display: flex;
     justify-content: space-between;
@@ -100,7 +99,6 @@ h1.food {
     .slide-active h4 {
     font-size: 3.4em;
     }
-
     
     .slide-active:after {
     content: "\0020";
@@ -123,6 +121,7 @@ h1.food {
     }
 }
 @media only screen and (max-width: 575px) {
+   
     .body {
         box-sizing: border-box;
         margin: 0;
@@ -160,5 +159,8 @@ h1.food {
         background-color: rgba(245, 229, 229, 0.548);
         margin: 0 17% 0 0;
         text-align: center;
+    }
+    .intro {
+        margin: 100px 20px 0 20px;
     }
 }
