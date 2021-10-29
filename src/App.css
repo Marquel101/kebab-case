@@ -9,8 +9,9 @@
     padding: 20px ;
 }
 h1 {
-    color:green;
+    color:rgb(228, 15, 15);
     text-align:center;
+
 }
 .bg-nav {
     background-color: rgb(230, 42, 42);
@@ -23,9 +24,6 @@ h1 {
     margin: 0;
     padding: 0;
     background-color: rgb(223, 108, 80);
-     /* background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
-    background-position: center;
-    background-repeat: repeat-y; */
 }
 .slider {
     position: relative;
@@ -33,9 +31,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
 }
-
 .right-arrow {
     position:absolute;
     top: 30%;
@@ -56,7 +52,6 @@ h1 {
     cursor: pointer;
     user-select: none;
 }
-
 .slide-active {
     color: red;
     text-align: center;
@@ -70,7 +65,16 @@ h1 {
     padding: 10px;
     margin-top: 10px;
 }
-
+h3 {
+    text-align: center;
+    align-items: center;
+    color: rgb(172, 4, 4)  
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
 @media only screen and (min-width: 575px) {
     .slide-active {
     position:relative;
@@ -119,5 +123,6 @@ h1 {
         background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
         background-position: center;
         background-repeat: repeat-y;
-    }
+       }
+    
 }
