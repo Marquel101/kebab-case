@@ -1,6 +1,6 @@
 # TOUGH TALK
 
-https://thereisnolinkyet.com/waitonit
+https://inspiring-agnesi-cb44a7.netlify.app/
 
 ## Project Description
 
@@ -32,9 +32,11 @@ createdTime: "2021-10-22T04:29:10.000Z"
 #### MVP
 
 MVP: 
--CSS STYLE (INCORPORATE FLEX, ANIMATIONS)
+-USE SOMETHING TO SHOW DATA ONE AT A TIME
 -SORT API CALLS TO AIR TABLE
 -CREATE COMPONENTS
+-ORGANIZE CODE
+-USE SOME SORT OF EXTERNAL STYLING
 
 
 
@@ -43,7 +45,8 @@ MVP:
 PMVP:
 -TIMER
 -RATING (BUTTONS)
--COMMENTS
+-ANIMATIONS
+-HAMBURGER
 
 ## Project Schedule
 
@@ -62,13 +65,13 @@ PMVP:
 | ------------------------- | :------: | :------------: | :-----------: |
 | Proposal                  |    H     |      2hrs      |     3hrs      |
 | Airtable setup            |    H     |     .5hrs      |        1hr    |
-| Component structuring     |    H     |      6hrs      |               |
-| Separating fetch request  |    H     |      6hrs      |               |
-| Displaying information    |    H     |      10hrs     |               |
-| post request              |    H     |      5hrs      |               |
-| Form creations            |    H     |      2hrs      |               |
-| css                       |    H     |      8hrs      |               |
-| Total                     |    H     |     39.5hrs    |               |
+| Component structuring     |    H     |      6hrs      |      9hr      |
+| Separating fetch request  |    H     |      6hrs      |      7hr       |
+| Displaying information    |    H     |      10hrs     |       6hr      |
+| post request              |    H     |      5hrs      |      5hr       |
+| Form creations            |    H     |      2hrs      |       3hr      |
+| css                       |    H     |      8hrs      |        12      |
+| Total                     |    H     |     39.5hrs    |         46hrs     |
 
 ## SWOT Analysis
 
