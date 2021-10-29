@@ -12,8 +12,8 @@ import axios from "axios"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from "react-bootstrap"
-import { RiMovieFill } from "react-icons/ri"
-import { IoFastFoodOutline, IoMusicalNotes } from "react-icons/io5"
+import { RiMovieFill, RiBuilding4Line } from "react-icons/ri"
+import { IoFastFoodOutline, IoMusicalNotes, IoAirplane } from "react-icons/io5"
 
 const api = 'https://api.airtable.com/v0/app5iH8juGohHz3Rz/Table%201?api_key=key6GAvSk5bgPajgl'
 
@@ -80,13 +80,13 @@ function App() {
         />
        </Route>
         <Route path="/Society">
-        <h1>SOCIETY</h1>
+        <h1>SOCIETY<RiBuilding4Line /></h1>
         <Society
           boom = {opinions}
         />
        </Route>
         <Route path="/Travel">
-        <h1>TRAVEL</h1>
+        <h1>TRAVEL<IoAirplane /></h1>
         <Travel
           boom = {opinions}
         />

@@ -4,9 +4,11 @@ const Contact = () => {
     return (
         <div>
         <footer>
-            <AiFillGithub href="https://github.com/Marquel101"/>
-            <AiFillLinkedin />
-            <AiFillInstagram />
+            <h3>HOLLA AT ME</h3>
+            <br />
+           <a href="https://github.com/Marquel101"> <AiFillGithub /> </a>
+           <a href="https://www.instagram.com/heymarquel/"> <AiFillInstagram /> </a>
+           <a href="https://www.linkedin.com/in/marquel-sears-0b8907219/"> <AiFillLinkedin /> </a>
         </footer>
         </div>
     )

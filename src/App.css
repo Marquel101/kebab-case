@@ -23,7 +23,7 @@ h1 {
     margin: 0;
     padding: 0;
     background-color: rgb(223, 108, 80);
-    /* background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+     /* background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
     background-position: center;
     background-repeat: repeat-y; */
 }
@@ -108,5 +108,16 @@ h1 {
     top:-30px; /* Offset of pointer border-width + bubble border-width */
     z-index:1;
     border-bottom-color:rgba(0,0,0,0.095);
+    }
+}
+@media only screen and (max-width: 575px) {
+    .body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(223, 108, 80);
+        background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+        background-position: center;
+        background-repeat: repeat-y;
     }
 }
