@@ -1,11 +1,16 @@
-h6 {
-    background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+.intro {
+    background-color: rgba(97, 33, 33, 0.678);
     border: 2px solid black;
-    background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
+    position: relative;
+    opacity: 1.00;
+    color: white;
+    margin: 100px 20px 0 20px;
+    text-align: center;
+    padding: 20px ;
+}
+h1 {
+    color:green;
+    text-align:center;
 }
 .bg-nav {
     background-color: rgb(230, 42, 42);
@@ -17,8 +22,10 @@ h6 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(241, 129, 129);
-
+    background-color: rgb(223, 108, 80);
+    /* background-image: url("https://png.pngitem.com/pimgs/s/361-3613258_talking-head-silhouette-at-clipart-people-talking-silhouette.png");
+    background-position: center;
+    background-repeat: repeat-y; */
 }
 .slider {
     position: relative;
@@ -52,10 +59,54 @@ h6 {
 
 .slide-active {
     color: red;
-    padding: 10px;
-    border: 5px solid black;
+    text-align: center;
+    border: 5px solid rgb(97, 20, 20);
     position: relative;
-   /* justify-content: center; */
+    justify-content: center;
     display: flex;
     align-items: baseline;
+    margin: 0 30px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 575px) {
+    .slide-active {
+    position:relative;
+    width: 320px;
+    padding: 10px;
+    margin: 3em;
+    background-color:#FFF;
+    color: #666;
+    font: normal 12px "Segoe UI", Arial, Sans-serif;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 100px;
+    border-radius: 10px;
+    border: 10px solid rgba(0,0,0,0.095);
+    }
+    .slide-active h4 {
+    font-size: 3.4em;
+    }
+
+    .slide-active:before,
+    .slide-active:after {
+    content: "\0020";
+    display:block;
+    position:absolute;
+    top:-20px;  /* Offset top the height of the pointer's border-width */
+    left:20px;
+    z-index:2;
+    width: 0;
+    height: 0;
+    overflow:hidden;
+    border: solid 20px transparent;
+    border-top: 0;
+    border-bottom-color:#FFF;
+    }
+    .slide-active:before {
+    top:-30px; /* Offset of pointer border-width + bubble border-width */
+    z-index:1;
+    border-bottom-color:rgba(0,0,0,0.095);
+    }
 }

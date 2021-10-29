@@ -1,4 +1,5 @@
 import Home from "./components/Home.jsx"
+import Contact from "./components/Complaint.jsx"
 import TV from "./components/tv.jsx"
 import Food from "./components/food.jsx"
 import Music from "./components/music.jsx"
@@ -60,7 +61,8 @@ function App() {
       <div className="data">
         
         <Route path="/" exact>
-            <Home />
+            <Home className="intro"/>
+            <Contact />
         </Route>
         
         <Route path="/Food">
