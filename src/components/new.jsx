@@ -24,7 +24,8 @@ const New = ({toggleFetch, setToggleFetch}) => {
 
         await axios.post(api, newOpinion )
         setToggleFetch(!toggleFetch)
-
+          //refresh page
+          //https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
         window.location.reload(false);
     }
     

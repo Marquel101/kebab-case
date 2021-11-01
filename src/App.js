@@ -33,6 +33,8 @@ function App() {
   
   return (
     <div>
+      //Navbar:
+      //https://www.youtube.com/watch?v=l1MYfu5YWHc
       <Navbar bg="nav" variant="dark" expand="sm" collapseOnSelect>
         <Navbar.Brand>
         TOUGH TALK

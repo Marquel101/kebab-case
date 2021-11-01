@@ -83,6 +83,8 @@ h1.food {
 }
 @media only screen and (min-width: 575px) {
     
+    /* speechbubble
+    https://stackoverflow.com/questions/8896320/pure-css-speech-bubble-with-border/8898048 */
     .slide-active {
     position:relative;
     width: 320px;
